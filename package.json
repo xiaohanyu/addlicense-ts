@@ -1,6 +1,6 @@
 {
   "name": "addlicense-ts",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A TypeScript port of Google's addlicense - adds copyright license headers to source code files",
   "type": "module",
   "main": "dist/index.js",
