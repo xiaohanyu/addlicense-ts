@@ -17,7 +17,7 @@ npx addlicense-ts <pattern...>
 ## Usage
 
 ```bash
-addlicense <pattern...> [options]
+addlicense-ts <pattern...> [options]
 ```
 
 ### Arguments
@@ -44,31 +44,31 @@ addlicense <pattern...> [options]
 Add Apache 2.0 headers to all TypeScript files:
 
 ```bash
-addlicense "src/**/*.ts" -c "Acme Inc."
+addlicense-ts "src/**/*.ts" -c "Acme Inc."
 ```
 
 Check if all files have headers (CI-friendly):
 
 ```bash
-addlicense "src/**/*.ts" --check
+addlicense-ts "src/**/*.ts" --check
 ```
 
 Use MIT license with a custom year range:
 
 ```bash
-addlicense "src/**/*.ts" -l mit -y "2020-2025" -c "Jane Doe"
+addlicense-ts "src/**/*.ts" -l mit -y "2020-2025" -c "Jane Doe"
 ```
 
 Add SPDX identifiers only:
 
 ```bash
-addlicense "src/**/*.ts" -s only
+addlicense-ts "src/**/*.ts" -s only
 ```
 
 Ignore `node_modules` and test files:
 
 ```bash
-addlicense "**/*.ts" -i "node_modules/**" -i "**/*.test.ts"
+addlicense-ts "**/*.ts" -i "node_modules/**" -i "**/*.test.ts"
 ```
 
 ## Supported Licenses

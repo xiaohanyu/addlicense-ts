@@ -24,7 +24,7 @@
  */
 
 /**
- * addlicense — public API.
+ * addlicense-ts — public API.
  *
  * This is a barrel file; implementation lives in ./runner.js.
  */

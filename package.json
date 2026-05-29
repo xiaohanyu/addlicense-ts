@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "addlicense": "dist/bin.js"
+    "addlicense-ts": "dist/bin.js"
   },
   "scripts": {
     "build": "tsup",
