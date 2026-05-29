@@ -129,10 +129,10 @@ pnpm run test:cov
 pnpm run lint
 
 # Format
-pnpm run format
+pnpm run lint:format
 
 # Type check
-pnpm run typecheck
+pnpm run lint:tsc
 ```
 
 ## License
