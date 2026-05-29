@@ -1,0 +1,73 @@
+{
+  "name": "addlicense-ts",
+  "version": "0.1.0",
+  "description": "A TypeScript port of Google's addlicense - adds copyright license headers to source code files",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "addlicense": "dist/bin.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "build:prod": "tsup --dts --minify --sourcemap",
+    "test": "vitest run",
+    "test:ci": "pnpm build:prod && pnpm lint:ci && pnpm test:cov",
+    "test:cov": "vitest run --coverage",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "lint:ci": "pnpm lint && pnpm lint:tsc",
+    "lint:fix": "biome check . --write",
+    "lint:format": "biome format . --write",
+    "lint:tsc": "tsc --noEmit",
+    "release": "commit-and-tag-version --bumpFiles package.json",
+    "prepublishOnly": "pnpm test:ci"
+  },
+  "keywords": [
+    "license",
+    "header",
+    "copyright",
+    "spdx",
+    "cli"
+  ],
+  "author": "Xiao Hanyu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohanyu/addlicense-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaohanyu/addlicense-ts/issues"
+  },
+  "homepage": "https://github.com/xiaohanyu/addlicense-ts#readme",
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.26.0",
+  "dependencies": {
+    "commander": "^14.0.3",
+    "minimatch": "^10.2.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.16",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@types/minimatch": "^6.0.0",
+    "@types/node": "^25.9.1",
+    "@vitest/coverage-v8": "^4.1.7",
+    "commit-and-tag-version": "^12.7.3",
+    "commitlint": "^21.0.1",
+    "lefthook": "^2.1.8",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}

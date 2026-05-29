@@ -1,0 +1,13 @@
+# Lefthook configuration
+# Install: pnpx lefthook install
+
+pre-commit:
+  commands:
+    biome:
+      glob: "*.{ts,tsx,js,jsx,json,jsonc}"
+      run: pnpm lint
+
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpx commitlint --edit {1}
